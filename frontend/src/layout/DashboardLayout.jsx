@@ -61,17 +61,23 @@ function DashboardLayout({
 
       </div>
 
-      <div className="flex-1 p-8">
+      <div className="flex-1 p-8 flex flex-col justify-between">
 
-        <div className="mb-8">
+        <div>
+          <div className="mb-8">
 
-          <h1 className="text-3xl font-bold capitalize">
-            {role} Dashboard
-          </h1>
+            <h1 className="text-3xl font-bold capitalize">
+              {role} Dashboard
+            </h1>
 
+          </div>
+
+          {children}
         </div>
 
-        {children}
+        <footer className="w-full text-center py-4 mt-12 border-t border-gray-200 text-sm text-gray-500 font-medium">
+          Node js project by : Chakali Ajay (T5) , C.Bunny(T8), Jishnu (T9), D. Navaneeth sai(U0)
+        </footer>
 
       </div>
 

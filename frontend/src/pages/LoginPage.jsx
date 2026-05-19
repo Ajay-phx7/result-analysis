@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API from "../services/api";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
@@ -26,8 +26,8 @@ function LoginPage() {
       setLoading(true);
 
       const response =
-        await axios.post(
-          `http://localhost:5000/api/auth/login/${role}`,
+        await API.post(
+          `/auth/login/${role}`,
           {
             email,
             password
@@ -74,67 +74,75 @@ function LoginPage() {
 
   return (
 
-    <div className="min-h-screen flex items-center justify-center bg-[#f5f7fb]">
+    <div className="min-h-screen flex flex-col justify-between bg-[#f5f7fb]">
 
-      <div className="bg-white p-8 rounded-3xl shadow-sm w-[350px]">
+      <div className="flex-1 flex items-center justify-center">
 
-        <h1 className="text-3xl font-bold text-center mb-2">
-          ResultSys
-        </h1>
+        <div className="bg-white p-8 rounded-3xl shadow-sm w-[350px]">
 
-        <p className="text-center text-gray-500 mb-8">
-          College Result Analysis
-        </p>
+          <h1 className="text-3xl font-bold text-center mb-2">
+            ResultSys
+          </h1>
 
-        <select
-          className="w-full border p-3 rounded-lg mb-4"
-          value={role}
-          onChange={(e) =>
-            setRole(e.target.value)
-          }
-        >
+          <p className="text-center text-gray-500 mb-8">
+            College Result Analysis
+          </p>
 
-          <option value="student">
-            Student
-          </option>
+          <select
+            className="w-full border p-3 rounded-lg mb-4"
+            value={role}
+            onChange={(e) =>
+              setRole(e.target.value)
+            }
+          >
 
-          <option value="teacher">
-            Teacher
-          </option>
+            <option value="student">
+              Student
+            </option>
 
-        </select>
+            <option value="teacher">
+              Teacher
+            </option>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full border p-3 rounded-lg mb-4"
-          onChange={(e) =>
-            setEmail(e.target.value)
-          }
-        />
+          </select>
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full border p-3 rounded-lg mb-6"
-          onChange={(e) =>
-            setPassword(e.target.value)
-          }
-        />
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full border p-3 rounded-lg mb-4"
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
+          />
 
-        <button
-          onClick={handleLogin}
-          disabled={loading}
-          className="w-full bg-black hover:bg-gray-800 transition text-white p-3 rounded-lg"
-        >
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full border p-3 rounded-lg mb-6"
+            onChange={(e) =>
+              setPassword(e.target.value)
+            }
+          />
 
-          {loading
-            ? "Logging in..."
-            : "Login"}
+          <button
+            onClick={handleLogin}
+            disabled={loading}
+            className="w-full bg-black hover:bg-gray-800 transition text-white p-3 rounded-lg"
+          >
 
-        </button>
+            {loading
+              ? "Logging in..."
+              : "Login"}
+
+          </button>
+
+        </div>
 
       </div>
+
+      <footer className="w-full text-center py-4 bg-white border-t border-gray-200 text-sm text-gray-500 font-medium">
+        Node js project by : Chakali Ajay (T5) , C.Bunny(T8), Jishnu (T9), D. Navaneeth sai(U0)
+      </footer>
 
     </div>
   );
