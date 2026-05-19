@@ -288,14 +288,6 @@ Change PORT in `.env` or use: `PORT=5001 npm run dev`
 - Verify frontend URL in backend CORS config
 - Check if API calls use correct base URL
 
-##  License
 
-ISC
-
-##  Contributors
-
-- Ajay Singh
-
----
 
 **Last Updated**: May 20, 2026
