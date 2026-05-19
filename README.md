@@ -80,7 +80,7 @@ result/
 └── README.md
 ```
 
-## 🚀 Getting Started
+
 
 ### Prerequisites
 - Node.js 18+ and npm
@@ -183,7 +183,7 @@ The application will be available at `http://localhost:5173`
 - `total` (INT)
 - `grade` (String)
 
-## 🔐 Test Credentials
+##  Test Credentials
 
 ### Students (All Passed)
 - Email: `arjun.verma@student.edu` | Password: `studentpass` (Sem 1)
@@ -203,7 +203,7 @@ The application will be available at `http://localhost:5173`
 - Email: `neha.gupta@school.edu` | Password: `password123`
 - Email: `vikram.sharma@school.edu` | Password: `password123`
 
-## 📝 Available API Endpoints
+##  Available API Endpoints
 
 ### Authentication
 - `POST /api/auth/login` - User login
@@ -222,7 +222,7 @@ The application will be available at `http://localhost:5173`
 - `GET /api/subjects/:semesterId` - Get subjects for semester
 - `POST /api/subjects/add` - Add new subject
 
-## 🎓 Features Details
+##  Features Details
 
 ### Student Dashboard
 - View current semester marks with internal/external breakdown
@@ -239,7 +239,7 @@ The application will be available at `http://localhost:5173`
 - View class performance analytics
 - Track failed students in subjects
 
-## 🔄 Database Seeding
+##  Database Seeding
 
 Run the following command to populate the database with sample data:
 ```bash
@@ -252,7 +252,7 @@ This creates:
 - 16 students (4 per semester)
 - 140 mark records with realistic grades
 
-## 📦 Build for Production
+##  Build for Production
 
 ### Frontend
 ```bash
@@ -264,7 +264,7 @@ Output will be in `frontend/dist/`
 ### Backend
 No build step needed. Deploy `backend/` directory directly.
 
-## 🚨 Important Notes
+## Important Notes
 
 1. **Environment Variables**: Never commit `.env` files. Use `.env.example` as template.
 2. **Database**: Ensure Supabase database URL is correctly configured.
@@ -274,7 +274,7 @@ No build step needed. Deploy `backend/` directory directly.
    npx prisma generate
    ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Port Already in Use
 Change PORT in `.env` or use: `PORT=5001 npm run dev`
@@ -288,11 +288,11 @@ Change PORT in `.env` or use: `PORT=5001 npm run dev`
 - Verify frontend URL in backend CORS config
 - Check if API calls use correct base URL
 
-## 📄 License
+##  License
 
 ISC
 
-## 👥 Contributors
+##  Contributors
 
 - Ajay Singh
 
